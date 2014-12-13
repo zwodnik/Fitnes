@@ -53,26 +53,113 @@ namespace Fitness
         public MainPage()
         {
             this.InitializeComponent();
+            CheckKoleczka();
         }
 
         private void Clicked_ODP1(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
+            if (logika.index < 15)
+            {
+                logika.suma[Pytania[logika.index].Kategoria-1] += Pytania[logika.index].Waga[0];
+                logika.index++;
+            }
+            CheckKoleczka();
         	// TODO: Add event handler implementation here.
         }
 
         private void Clicked_ODP2(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
+            if (logika.index < 15)
+            {
+                logika.suma[Pytania[logika.index].Kategoria - 1] += Pytania[logika.index].Waga[1];
+                logika.index++;
+            }
+            CheckKoleczka();
         	// TODO: Add event handler implementation here.
         }
 
         private void Clicked_ODP3(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
+            if (logika.index < 15)
+            {
+                logika.suma[Pytania[logika.index].Kategoria - 1] += Pytania[logika.index].Waga[2];
+                logika.index++;
+            }
+            CheckKoleczka();
         	// TODO: Add event handler implementation here.
         }
 
         private void Clicked_ODP4(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
+            if (logika.index < 15)
+            {
+                logika.suma[Pytania[logika.index].Kategoria - 1] += Pytania[logika.index].Waga[3];
+                logika.index++;
+            }
+            CheckKoleczka();
         	// TODO: Add event handler implementation here.
+        }
+
+        private void CheckKoleczka()
+        {
+            if(logika.index > 2)
+            {
+                rect1.Visibility = Visibility.Visible;
+                circle1.Visibility = Visibility.Visible;
+            }
+
+            if (logika.index > 5)
+            {
+                rect2.Visibility = Visibility.Visible;
+                circle2.Visibility = Visibility.Visible;
+            }
+
+            if (logika.index > 8)
+            {
+                rect3.Visibility = Visibility.Visible;
+                circle3.Visibility = Visibility.Visible;
+            }
+
+            if (logika.index > 11)
+            {
+                rect4.Visibility = Visibility.Visible;
+                circle4.Visibility = Visibility.Visible;
+            }
+
+            if (logika.index < 15)
+            {
+                Question.Text = Pytania[logika.index].Tresc;
+                ODP1.Content = Pytania[logika.index].pytania[0];
+                ODP2.Content = Pytania[logika.index].pytania[1];
+                ODP3.Content = Pytania[logika.index].pytania[2];
+                ODP4.Content = Pytania[logika.index].pytania[3];
+                
+            }
+            else
+            {
+                WynikKoncowy();
+            }
+        }
+
+        private void WynikKoncowy()
+        {
+            ODP1.Visibility = Visibility.Collapsed;
+            ODP2.Visibility = Visibility.Collapsed;
+            ODP3.Visibility = Visibility.Collapsed;
+            ODP4.Visibility = Visibility.Collapsed;
+
+            int min = 0;
+            for(int i = 0; i < 5; i++)
+            {
+                if(logika.suma[i] < logika.suma[min])min = i;
+            }
+
+            if (logika.suma[min] < 7) Question.Text = odpowiedzi[3 * min];
+            else if (logika.suma[min] < 10) Question.Text = odpowiedzi[3 * min + 1];
+            else
+            {
+                Question.Text = odpowiedzi[3 * min + 2];
+            }
         }
     }
 }
