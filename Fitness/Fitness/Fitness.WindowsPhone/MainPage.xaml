@@ -7,11 +7,82 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+	<Page.Resources>
+		<Storyboard x:Name="menu_anim">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="grid">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.GlobalOffsetY)" Storyboard.TargetName="grid">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.GlobalOffsetX)" Storyboard.TargetName="grid">
+				<EasingDoubleKeyFrame KeyTime="0" Value="300"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationY)" Storyboard.TargetName="grid">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationX)" Storyboard.TargetName="grid">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Question">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.GlobalOffsetX)" Storyboard.TargetName="Question">
+				<EasingDoubleKeyFrame KeyTime="0" Value="300"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.GlobalOffsetX)" Storyboard.TargetName="button">
+				<EasingDoubleKeyFrame KeyTime="0" Value="-350"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.GlobalOffsetX)" Storyboard.TargetName="button1">
+				<EasingDoubleKeyFrame KeyTime="0" Value="-250"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.GlobalOffsetX)" Storyboard.TargetName="button2">
+				<EasingDoubleKeyFrame KeyTime="0" Value="-150"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.GlobalOffsetX)" Storyboard.TargetName="button3">
+				<EasingDoubleKeyFrame KeyTime="0" Value="-50"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="button">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="button1">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="button2">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="button3">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+		</Storyboard>
+	</Page.Resources>
 
     <Grid>
     	<Image Source="Assets/tlo.png" Opacity="0.2" Margin="0,62,0,322"/>
-    	<TextBlock x:Name="Question" TextAlignment="Center"  VerticalAlignment="Center" TextWrapping="Wrap" Height="165" Margin="10,134,8,341" LineHeight="8" FontSize="32" />
-    	<Grid HorizontalAlignment="Left" Height="57" VerticalAlignment="Top" Width="380" Margin="10,0,0,0">
+    	<TextBlock x:Name="Question" TextAlignment="Center"  VerticalAlignment="Center" TextWrapping="Wrap" Height="165" Margin="10,134,8,341" LineHeight="8" FontSize="32" >
+    		<TextBlock.Projection>
+    			<PlaneProjection/>
+    		</TextBlock.Projection>
+    	</TextBlock>
+    	<Grid x:Name="grid" HorizontalAlignment="Left" Height="57" VerticalAlignment="Top" Width="380" Margin="10,0,0,0">
+    		<Grid.Projection>
+    			<PlaneProjection/>
+    		</Grid.Projection>
     		<Image HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Source="Assets/Circle.png" Margin="10,10,0,0"/>
     		<Image HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Source="Assets/Circle2.png" Margin="10,10,0,0"/>
     		<Image HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Source="Assets/Circle.png" Margin="93,10,0,0"/>
@@ -45,10 +116,26 @@
     		<Rectangle Opacity="0.4" Fill="#FF1E64C8" Margin="-10,60,-10,-9"   />
 		</Grid>
     	<StackPanel Margin="10,349,10,10">
-    		<Button Content="Odp1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="70"/>
-    		<Button Content="Odp2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="70"/>
-    		<Button Content="Odp3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="70"/>
-    		<Button Content="Odp4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="70"/>
+    		<Button x:Name="button" Content="Odp1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="70">
+    			<Button.Projection>
+    				<PlaneProjection/>
+    			</Button.Projection>
+    		</Button>
+    		<Button x:Name="button1" Content="Odp2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="70">
+    			<Button.Projection>
+    				<PlaneProjection/>
+    			</Button.Projection>
+    		</Button>
+    		<Button x:Name="button2" Content="Odp3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="70">
+    			<Button.Projection>
+    				<PlaneProjection/>
+    			</Button.Projection>
+    		</Button>
+    		<Button x:Name="button3" Content="Odp4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="70">
+    			<Button.Projection>
+    				<PlaneProjection/>
+    			</Button.Projection>
+    		</Button>
     	</StackPanel>
     </Grid>
 </Page>
