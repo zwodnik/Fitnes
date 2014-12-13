@@ -54,5 +54,25 @@ namespace Fitness
         {
             this.InitializeComponent();
         }
+
+        private void Clicked_ODP1(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+        	// TODO: Add event handler implementation here.
+        }
+
+        private void Clicked_ODP2(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+        	// TODO: Add event handler implementation here.
+        }
+
+        private void Clicked_ODP3(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+        	// TODO: Add event handler implementation here.
+        }
+
+        private void Clicked_ODP4(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+        	// TODO: Add event handler implementation here.
+        }
     }
 }
