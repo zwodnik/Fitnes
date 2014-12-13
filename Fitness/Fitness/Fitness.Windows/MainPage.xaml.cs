@@ -44,11 +44,11 @@ namespace Fitness
 
         List<string> odpowiedzi = new List<string>()
         {
-            "odpowiedz 1", "odpowiedz 1", "odpowiedz 1",
-            "odpowiedz 1", "odpowiedz 1", "odpowiedz 1", 
-            "odpowiedz 1", "odpowiedz 1", "odpowiedz 1",
-            "odpowiedz 1", "odpowiedz 1", "odpowiedz 1",
-            "odpowiedz 1", "odpowiedz 1", "odpowiedz 1"
+            "Strasznie zaniedbujesz diete! Popraw to! ", "Nie jest źle, ale zawsze może być lepiej", "Jest elegancko, tak trzymaj ☺!",
+            "Weź się w garść, trochę ruchu ci się sprzyda!", "Aktywność w normie, ale zawsze może być lepiej", "Dobrze, że ćwiczysz, tak trzymaj ☺!", 
+            "Musisz zdecydowanie więcej ćwiczyć swój umysł", "Nie jest źle, zawsze możesz więcej trenować", "Świetnie! Oby tak dalej ☺!",
+            "Musisz się wyluzować, zdecydowanie więcej odpoczywaj", "Nie jest źle, ale więcej luzu ;-)", "Dobże, widać że jesteś wyluzowany ☺",
+            "Gościu, więcej życia chcę w tobie zobaczyć! Jest strasznie źle!", "Nawet dobrze, możesz się częściej uśmiechać ;-)", "Widać, że jesteś zadowolony z życia! Tak trzymaj! Have a nice day ;-)"
         };
         public MainPage()
         {
