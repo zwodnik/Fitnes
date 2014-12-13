@@ -116,22 +116,22 @@
     		<Rectangle Opacity="0.4" Fill="#FF1E64C8" Margin="-10,60,-10,-9"   />
 		</Grid>
     	<StackPanel Margin="10,349,10,10">
-    		<Button x:Name="button" Content="Odp1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="70">
+    		<Button x:Name="ODP1" Content="Odp1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="70">
     			<Button.Projection>
     				<PlaneProjection/>
     			</Button.Projection>
     		</Button>
-    		<Button x:Name="button1" Content="Odp2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="70">
+            <Button x:Name="ODP2" Content="Odp2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="70">
     			<Button.Projection>
     				<PlaneProjection/>
     			</Button.Projection>
     		</Button>
-    		<Button x:Name="button2" Content="Odp3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="70">
+            <Button x:Name="ODP3" Content="Odp3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="70">
     			<Button.Projection>
     				<PlaneProjection/>
     			</Button.Projection>
     		</Button>
-    		<Button x:Name="button3" Content="Odp4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="70">
+            <Button x:Name="ODP4" Content="Odp4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="70">
     			<Button.Projection>
     				<PlaneProjection/>
     			</Button.Projection>
