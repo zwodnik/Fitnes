@@ -12,7 +12,7 @@ namespace Fitness
             set;
         }
 
-        public string[] Pytanie
+        public string[] pytania
         {
             get;
             set;
