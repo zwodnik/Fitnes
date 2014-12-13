@@ -15,10 +15,13 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Pytanie.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="$(MSBuildThisFileDirectory)Assets\Circle.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\Circle2.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\tlo.png" />
+
+	<Compile Include="$(MSBuildThisFileDirectory)Logika.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pytanie.cs" />
   </ItemGroup>
 </Project>

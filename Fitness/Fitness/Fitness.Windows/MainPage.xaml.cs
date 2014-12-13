@@ -22,7 +22,7 @@ namespace Fitness
     /// </summary>
     public sealed partial class MainPage : Page
     {
-
+        Logika logika = new Logika();
         List<Pytanie> Pytania = new List<Pytanie>()
         {
             new Pytanie(){Tresc = "1. Jak często spożywa Pan/Pani alkohol?", pytania = new string[]{"często", "rzadko", "czasami", "wcale"}, Waga = new int[]{1,2,3,4}, Kategoria = 1},
@@ -40,6 +40,15 @@ namespace Fitness
             new Pytanie(){Tresc = "1. Czy często się Pan/Pani śmieje?", pytania = new string[]{"zdecydowanie tak", "raczej tak", "raczej nie", "zdecydowanie nie"}, Waga = new int[]{1,2,3,4}, Kategoria = 5},
             new Pytanie(){Tresc = "2. Czy ma Pan/Pani wady postawy?", pytania = new string[]{"zdecydowanie tak", "raczej tak", "raczej nie", "zdecydowanie nie"}, Waga = new int[]{1,2,3,4}, Kategoria = 5},
             new Pytanie(){Tresc = "3. Czy jest Pan/Pani optymistą/ką", pytania = new string[]{"zdecydowanie tak", "raczej tak", "raczej nie", "zdecydowanie nie"}, Waga = new int[]{1,2,3,4}, Kategoria = 5},
+        };
+
+        List<string> odpowiedzi = new List<string>()
+        {
+            "odpowiedz 1", "odpowiedz 1", "odpowiedz 1",
+            "odpowiedz 1", "odpowiedz 1", "odpowiedz 1", 
+            "odpowiedz 1", "odpowiedz 1", "odpowiedz 1",
+            "odpowiedz 1", "odpowiedz 1", "odpowiedz 1",
+            "odpowiedz 1", "odpowiedz 1", "odpowiedz 1"
         };
         public MainPage()
         {
