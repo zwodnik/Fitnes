@@ -22,6 +22,34 @@ namespace Fitness
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        Logika logika = new Logika();
+        List<Pytanie> Pytania = new List<Pytanie>()
+        {
+            new Pytanie(){Tresc = "Pytanie 1", pytania = new string[]{"Odpowiedz1", "Odpowiedz2", "Odpowiedz3", "Odpowiedz4"}, Waga = new int[]{1,2,3,4}, Kategoria = 1},
+            new Pytanie(){Tresc = "Pytanie 1", pytania = new string[]{"Odpowiedz1", "Odpowiedz2", "Odpowiedz3", "Odpowiedz4"}, Waga = new int[]{1,2,3,4}, Kategoria = 1},
+            new Pytanie(){Tresc = "Pytanie 1", pytania = new string[]{"Odpowiedz1", "Odpowiedz2", "Odpowiedz3", "Odpowiedz4"}, Waga = new int[]{1,2,3,4}, Kategoria = 1},
+            new Pytanie(){Tresc = "Pytanie 1", pytania = new string[]{"Odpowiedz1", "Odpowiedz2", "Odpowiedz3", "Odpowiedz4"}, Waga = new int[]{1,2,3,4}, Kategoria = 2},
+            new Pytanie(){Tresc = "Pytanie 1", pytania = new string[]{"Odpowiedz1", "Odpowiedz2", "Odpowiedz3", "Odpowiedz4"}, Waga = new int[]{1,2,3,4}, Kategoria = 2},
+            new Pytanie(){Tresc = "Pytanie 1", pytania = new string[]{"Odpowiedz1", "Odpowiedz2", "Odpowiedz3", "Odpowiedz4"}, Waga = new int[]{1,2,3,4}, Kategoria = 2},
+            new Pytanie(){Tresc = "Pytanie 1", pytania = new string[]{"Odpowiedz1", "Odpowiedz2", "Odpowiedz3", "Odpowiedz4"}, Waga = new int[]{1,2,3,4}, Kategoria = 3},
+            new Pytanie(){Tresc = "Pytanie 1", pytania = new string[]{"Odpowiedz1", "Odpowiedz2", "Odpowiedz3", "Odpowiedz4"}, Waga = new int[]{1,2,3,4}, Kategoria = 3},
+            new Pytanie(){Tresc = "Pytanie 1", pytania = new string[]{"Odpowiedz1", "Odpowiedz2", "Odpowiedz3", "Odpowiedz4"}, Waga = new int[]{1,2,3,4}, Kategoria = 3},
+            new Pytanie(){Tresc = "Pytanie 1", pytania = new string[]{"Odpowiedz1", "Odpowiedz2", "Odpowiedz3", "Odpowiedz4"}, Waga = new int[]{1,2,3,4}, Kategoria = 4},
+            new Pytanie(){Tresc = "Pytanie 1", pytania = new string[]{"Odpowiedz1", "Odpowiedz2", "Odpowiedz3", "Odpowiedz4"}, Waga = new int[]{1,2,3,4}, Kategoria = 4},
+            new Pytanie(){Tresc = "Pytanie 1", pytania = new string[]{"Odpowiedz1", "Odpowiedz2", "Odpowiedz3", "Odpowiedz4"}, Waga = new int[]{1,2,3,4}, Kategoria = 4},
+            new Pytanie(){Tresc = "Pytanie 1", pytania = new string[]{"Odpowiedz1", "Odpowiedz2", "Odpowiedz3", "Odpowiedz4"}, Waga = new int[]{1,2,3,4}, Kategoria = 5},
+            new Pytanie(){Tresc = "Pytanie 1", pytania = new string[]{"Odpowiedz1", "Odpowiedz2", "Odpowiedz3", "Odpowiedz4"}, Waga = new int[]{1,2,3,4}, Kategoria = 5},
+            new Pytanie(){Tresc = "Pytanie 1", pytania = new string[]{"Odpowiedz1", "Odpowiedz2", "Odpowiedz3", "Odpowiedz4"}, Waga = new int[]{1,2,3,4}, Kategoria = 5},
+        };
+
+        List<string> odpowiedzi = new List<string>()
+        {
+            "odpowiedz 1", "odpowiedz 1", "odpowiedz 1",
+            "odpowiedz 1", "odpowiedz 1", "odpowiedz 1", 
+            "odpowiedz 1", "odpowiedz 1", "odpowiedz 1",
+            "odpowiedz 1", "odpowiedz 1", "odpowiedz 1",
+            "odpowiedz 1", "odpowiedz 1", "odpowiedz 1"
+        };
         public MainPage()
         {
             this.InitializeComponent();

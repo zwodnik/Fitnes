@@ -67,9 +67,13 @@
                         </ImageBrush.Transform>
                     </ImageBrush>
                 </Grid.Background>
-                <StackPanel>
+                <StackPanel VerticalAlignment="Center">
                     
-                    <TextBlock x:Name="Question" Text="Tu Będzie pytanie?" FontSize="46" Foreground="Black" HorizontalAlignment="Center" />
+                    <TextBlock x:Name="Question" Text="Tu Będzie pytanie?" FontSize="46" Foreground="Black" HorizontalAlignment="Center" FontWeight="Bold" />
+                    <Button Content="Odp1" HorizontalAlignment="Center" Margin="0,40,0,0"  />
+                    <Button Content="Odp2" HorizontalAlignment="Center" Margin="0,10" />
+                    <Button Content="Odp3" HorizontalAlignment="Center" Margin="0,10" />
+                    <Button Content="Odp4" HorizontalAlignment="Center" Margin="0,10" />
                     
                 </StackPanel>
             </Grid>
