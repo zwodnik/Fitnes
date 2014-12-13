@@ -10,7 +10,7 @@ namespace Fitness
         public int index = 0;
         public Logika()
         {
-
+            
         }
     }
 }
