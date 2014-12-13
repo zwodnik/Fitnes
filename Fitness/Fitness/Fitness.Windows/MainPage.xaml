@@ -7,7 +7,73 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="#FFF7F7C7">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
 
+        <StackPanel Grid.Row="0">
+            <Grid Height="100">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="44" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="44" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="44" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="44" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="44" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Image Source="Assets/Circle2.png" Grid.Column="1" />
+
+                <Rectangle Height="5" Grid.Column="2" Fill="#FF1E64C8" x:Name="rect1" Visibility="Collapsed" />
+
+                <Image Source="Assets/Circle.png" Grid.Column="3" />
+                <Image Source="Assets/Circle2.png" Grid.Column="3" Visibility="Collapsed" x:Name="circle1" />
+
+                <Rectangle Height="5" Grid.Column="4" Fill="#FF1E64C8" x:Name="rect2" Visibility="Collapsed" />
+
+                <Image Source="Assets/Circle.png" Grid.Column="5" />
+                <Image Source="Assets/Circle2.png" Grid.Column="5" Visibility="Collapsed" x:Name="circle2" />
+
+                <Rectangle Height="5" Grid.Column="6" Fill="#FF1E64C8"  x:Name="rect3" Visibility="Collapsed" />
+
+                <Image Source="Assets/Circle.png" Grid.Column="7" />
+                <Image Source="Assets/Circle2.png" Grid.Column="7" Visibility="Collapsed" x:Name="circle3" />
+
+                <Rectangle Height="5" Grid.Column="8" Fill="#FF1E64C8"  x:Name="rect4" Visibility="Collapsed" />
+
+                <Image Source="Assets/Circle.png" Grid.Column="9" />
+                <Image Source="Assets/Circle2.png" Grid.Column="9" Visibility="Collapsed" x:Name="circle4" />
+
+            </Grid>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <Rectangle Height="5" Fill="#FF1E64C8" Opacity="0.6" />
+        </StackPanel>
+        <StackPanel Grid.Row="2">
+            <Grid Height="650">
+                <Grid.Background>
+                    <ImageBrush ImageSource="Assets/tlo.png" Stretch="Uniform" Opacity="0.2">
+                        <ImageBrush.Transform>
+                            <CompositeTransform ScaleX="0.5" ScaleY="0.5" CenterX="650" CenterY="300"/>
+                        </ImageBrush.Transform>
+                    </ImageBrush>
+                </Grid.Background>
+                <StackPanel>
+                    
+                    <TextBlock x:Name="Question" Text="Tu Będzie pytanie?" FontSize="46" Foreground="Black" HorizontalAlignment="Center" />
+                    
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+        
     </Grid>
 </Page>
