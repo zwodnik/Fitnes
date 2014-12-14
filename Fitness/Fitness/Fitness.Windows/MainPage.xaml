@@ -9,6 +9,61 @@
     
     <Page.Resources>
         
+    	<Storyboard x:Name="menu_anim">
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.GlobalOffsetX)" Storyboard.TargetName="grid">
+    			<EasingDoubleKeyFrame KeyTime="0" Value="1000"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+    		</DoubleAnimationUsingKeyFrames>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="grid">
+    			<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+    		</DoubleAnimationUsingKeyFrames>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+    			<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.6"/>
+    		</DoubleAnimationUsingKeyFrames>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Question">
+    			<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+    		</DoubleAnimationUsingKeyFrames>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.GlobalOffsetY)" Storyboard.TargetName="Question">
+    			<EasingDoubleKeyFrame KeyTime="0" Value="-300"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+    		</DoubleAnimationUsingKeyFrames>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="button">
+    			<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+    		</DoubleAnimationUsingKeyFrames>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.GlobalOffsetX)" Storyboard.TargetName="button">
+    			<EasingDoubleKeyFrame KeyTime="0" Value="-500"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+    		</DoubleAnimationUsingKeyFrames>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.GlobalOffsetX)" Storyboard.TargetName="button1">
+    			<EasingDoubleKeyFrame KeyTime="0" Value="500"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+    		</DoubleAnimationUsingKeyFrames>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="button1">
+    			<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+    		</DoubleAnimationUsingKeyFrames>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="button2">
+    			<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+    		</DoubleAnimationUsingKeyFrames>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.GlobalOffsetY)" Storyboard.TargetName="button2">
+    			<EasingDoubleKeyFrame KeyTime="0" Value="300"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+    		</DoubleAnimationUsingKeyFrames>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.GlobalOffsetY)" Storyboard.TargetName="button3">
+    			<EasingDoubleKeyFrame KeyTime="0" Value="300"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+    		</DoubleAnimationUsingKeyFrames>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="button3">
+    			<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+    		</DoubleAnimationUsingKeyFrames>
+    	</Storyboard>
+        
     </Page.Resources>
     
     <Grid Background="#FFF7F7C7">
@@ -20,7 +75,10 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0">
-            <Grid Height="100">
+            <Grid x:Name="grid" Height="100">
+            	<Grid.Projection>
+            		<PlaneProjection/>
+            	</Grid.Projection>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="44" />
@@ -60,7 +118,7 @@
             </Grid>
         </StackPanel>
         <StackPanel Grid.Row="1">
-            <Rectangle Height="5" Fill="#FF1E64C8" Opacity="0.6" />
+            <Rectangle x:Name="rectangle" Height="5" Fill="#FF1E64C8" Opacity="0.6" />
         </StackPanel>
         <StackPanel Grid.Row="2">
             <Grid Height="650">
@@ -72,14 +130,34 @@
                     </ImageBrush>
                 </Grid.Background>
                 <StackPanel VerticalAlignment="Center">
-                    <TextBlock x:Name="Question" Text="Tu Będzie pytanie?" FontSize="56" Foreground="Black" HorizontalAlignment="Center" Width="1100" TextAlignment="Center" TextWrapping="Wrap" Margin="133,0" />
+                    <TextBlock x:Name="Question" Text="Tu Będzie pytanie?" FontSize="56" Foreground="Black" HorizontalAlignment="Center" Width="1100" TextAlignment="Center" TextWrapping="Wrap" Margin="133,0" >
+                    	<TextBlock.Projection>
+                    		<PlaneProjection/>
+                    	</TextBlock.Projection>
+                    </TextBlock>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,40,0,0">
-                        <Button Content="Odp1" HorizontalAlignment="Center" Margin="10" Width="300" Height="80" Foreground="Black" FontSize="28" BorderBrush="Black"  Click="Clicked_ODP1"/>
-                        <Button Content="Odp2" HorizontalAlignment="Center" Margin="10" Width="300" Height="80" Foreground="Black" FontSize="28" BorderBrush="Black"  Click="Clicked_ODP2"/>
+                        <Button x:Name="button" Content="Odp1" HorizontalAlignment="Center" Margin="10" Width="300" Height="80" Foreground="Black" FontSize="28" BorderBrush="Black"  Click="Clicked_ODP1">
+                        	<Button.Projection>
+                        		<PlaneProjection/>
+                        	</Button.Projection>
+                        </Button>
+                        <Button x:Name="button1" Content="Odp2" HorizontalAlignment="Center" Margin="10" Width="300" Height="80" Foreground="Black" FontSize="28" BorderBrush="Black"  Click="Clicked_ODP2">
+                        	<Button.Projection>
+                        		<PlaneProjection/>
+                        	</Button.Projection>
+                        </Button>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Content="Odp3" HorizontalAlignment="Center" Margin="10" Width="300" Height="80" Foreground="Black" FontSize="28" BorderBrush="Black"  Click="Clicked_ODP3"/>
-                        <Button Content="Odp4" HorizontalAlignment="Center" Margin="10" Width="300" Height="80" Foreground="Black" FontSize="28" BorderBrush="Black"  Click="Clicked_ODP4"/>
+                        <Button x:Name="button2" Content="Odp3" HorizontalAlignment="Center" Margin="10" Width="300" Height="80" Foreground="Black" FontSize="28" BorderBrush="Black"  Click="Clicked_ODP3">
+                        	<Button.Projection>
+                        		<PlaneProjection/>
+                        	</Button.Projection>
+                        </Button>
+                        <Button x:Name="button3" Content="Odp4" HorizontalAlignment="Center" Margin="10" Width="300" Height="80" Foreground="Black" FontSize="28" BorderBrush="Black"  Click="Clicked_ODP4">
+                        	<Button.Projection>
+                        		<PlaneProjection/>
+                        	</Button.Projection>
+                        </Button>
                     </StackPanel>
                 </StackPanel>
             </Grid>
