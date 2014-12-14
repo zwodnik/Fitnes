@@ -9,6 +9,46 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+    	<Image Source="Assets/tlo.png" Opacity="0.2" Margin="0,62,0,322"/>
+    	<TextBlock x:Name="Question" TextAlignment="Center"  VerticalAlignment="Center" TextWrapping="Wrap" Height="165" Margin="10,134,8,341" LineHeight="8" FontSize="32" />
+    	<Grid HorizontalAlignment="Left" Height="57" VerticalAlignment="Top" Width="380" Margin="10,0,0,0">
+    		<Image HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Source="Assets/Circle.png" Margin="10,10,0,0"/>
+    		<Image HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Source="Assets/Circle2.png" Margin="10,10,0,0"/>
+    		<Image HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Source="Assets/Circle.png" Margin="93,10,0,0"/>
+    		<Image Visibility="Collapsed" x:Name="circle1" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Source="Assets/Circle2.png" Margin="93,10,0,0"/>
+    		<Image HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="173,10,0,0" Source="Assets/Circle.png"/>
+    		<Image Visibility="Collapsed" x:Name="circle2" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="173,10,0,0" Source="Assets/Circle2.png"/>
+    		<Image HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="249,10,0,0" Source="Assets/Circle.png"/>
+    		<Image Visibility="Collapsed" x:Name="circle3" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="249,10,0,0" Source="Assets/Circle2.png"/>
+    		<Image HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="330,10,0,0" Source="Assets/Circle.png"/>
+    		<Image Visibility="Collapsed" x:Name="circle4" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="330,10,0,0" Source="Assets/Circle2.png"/>
+			<Rectangle Visibility="Collapsed" Fill="#FF1E64C8" x:Name="rect1" Margin="50,28,287,68" RenderTransformOrigin="0.5,0.5"  >
+				<Rectangle.RenderTransform>
+					<CompositeTransform ScaleY="-1"/>
+				</Rectangle.RenderTransform>
+			</Rectangle> <!--   "Visibility="Collapsed" -->
+			<Rectangle Visibility="Collapsed" Fill="#FF1E64C8" x:Name="rect2" Margin="133,29,207,67" RenderTransformOrigin="0.5,0.5"  >
+				<Rectangle.RenderTransform>
+					<CompositeTransform ScaleY="-1"/>
+				</Rectangle.RenderTransform>
+			</Rectangle>
+			<Rectangle Visibility="Collapsed" Fill="#FF1E64C8" x:Name="rect3" Margin="213,29,131,67" RenderTransformOrigin="0.5,0.5"  >
+				<Rectangle.RenderTransform>
+					<CompositeTransform ScaleY="-1"/>
+				</Rectangle.RenderTransform>
+			</Rectangle>
+    		<Rectangle  Visibility="Collapsed" Fill="#FF1E64C8" x:Name="rect4" Margin="289,28,50,68" RenderTransformOrigin="0.5,0.5"  >
+    			<Rectangle.RenderTransform>
+    				<CompositeTransform ScaleY="-1"/>
+    			</Rectangle.RenderTransform>
+    		</Rectangle>
+    		<Rectangle Opacity="0.4" Fill="#FF1E64C8" Margin="-10,60,-10,-9"   />
+		</Grid>
+    	<StackPanel Margin="10,349,10,10">
+    		<Button Content="Odp1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="70"/>
+    		<Button Content="Odp2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="70"/>
+    		<Button Content="Odp3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="70"/>
+    		<Button Content="Odp4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="70"/>
+    	</StackPanel>
     </Grid>
 </Page>
